@@ -1,8 +1,10 @@
 import express from "express"
 import cors from "cors"
-import pool from "./config/database.js"
+import authConfig from "./config/passport.js"
 
 const app = express()
+
+authConfig()
 
 app.use(express.json())
 app.use(cors())
